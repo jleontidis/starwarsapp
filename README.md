@@ -35,13 +35,8 @@ npm test
 
 ## Built With
 
-* [Aurelia](http://aurelia.io) - The web framework used
-* [Bootstrap](http://getbootstrap.com/) - Dependency Management
-
-## Authors
-
-* **Jérôme Leontidis** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
+* [Aurelia](http://aurelia.io)
+* [Bootstrap](http://getbootstrap.com/)
 
 ## License
 
