@@ -29,7 +29,3 @@ The application will then be availiable at http://localhost:9000
 
 * [Aurelia](http://aurelia.io)
 * [Bootstrap](http://getbootstrap.com/)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
