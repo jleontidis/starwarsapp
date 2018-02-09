@@ -1,24 +1,25 @@
 <template>
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-md-4">
-          <div class="card bg-starwars card-starwars card-films" repeat.for="r of data.results">
-            <div class="card-header">
-                <h2>${film.title}</h2>
-            </div>
-            <div class="card-body">
-                <ul class="starwars-list-info films-list">
-                    <li>Directed by: <span>${film.director}</span></li>
-                    <li>Release Date: <span>${film.release_date}</span></li>
-                </ul>
-                <h6>Description: </h6>
-                <p>${film.opening_crawl}</p>   
-            </div>
-            <div class="card-footer">
-                <a route-href="route: film-detail; params.bind: {id: filmid}">View More</a>
-            </div>
-        </div><!-- end .card-starwars -->
-      </div><!-- end .col-12.col-md-4 -->
-    </div><!-- end .row -->
-  </div><!-- end .container -->
+    <require from="../resources/value-converters/search"></require>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6" repeat.for="film of films.data | fuse:options:criteria">
+                <div class="card bg-starwars card-starwars card-films">
+                    <div class="card-header">
+                        <h2>${film.title}</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="starwars-list-info films-list">
+                            <li>Directed by: <span>${film.director}</span></li>
+                            <li>Release Date: <span>${film.release_date}</span></li>
+                        </ul>
+                        <h6>Description: </h6>
+                        <p>${film.opening_crawl}</p>   
+                    </div>
+                    <div class="card-footer">
+                        <a route-href="route: film-detail; params.bind: {id: getID(film.url)}">View More</a>
+                    </div>
+                </div><!-- end .card-starwars -->
+            </div><!-- end .col-12 -->
+        </div><!-- end .row -->
+    </div><!-- end .container -->>
 </template>

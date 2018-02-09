@@ -1,25 +1,27 @@
+
 <template>
+  <require from="../resources/value-converters/search"></require>
   <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-4" repeat.for="r of data.results">
-        <div class="card bg-starwars card-starwars">
-          <div class="card-header">
-            <h2>${vehicle.name}</h2>
-          </div>
-          <div class="card-body">
-            <ul class="starwars-list-info">
+      <div class="row">
+        <div class="col-12 col-md-6" repeat.for="vehicle of vehicles.data | fuse:options:criteria">
+          <div class="card bg-starwars card-starwars">
+            <div class="card-header">
+              <h2>${vehicle.name}</h2>
+            </div>
+            <div class="card-body">
+              <ul class="starwars-list-info">
                 <li>Model: <span>${vehicle.model}</span></li>
                 <li>Cost: <span>${vehicle.cost_in_credits} credits</span></li>
                 <li>Crew: <span>${vehicle.crew}</span></li>
                 <li>Passengers: <span>${vehicle.passengers}</span></li>
                 <li>Class:<span>${vehicle.vehicle_class}</span></li>
-            </ul>
-          </div><!-- .end card-body -->
-          <div class="card-footer">
-            <a route-href="route: vehicle-detail; params.bind: { id: vehicleid }">View more</a>
-          </div>
-        </div><!-- .end card-starwars -->
-      </div><!-- .end col-12 -->
-    </div><!-- .end row -->
-  </div><!-- .end container -->
+              </ul>
+            </div><!-- .end card-body -->
+            <div class="card-footer">
+              <a route-href="route: vehicle-detail; params.bind: { id: getID(vehicle.url) }">View more</a>
+            </div>
+          </div><!-- .end card-starwars --> 
+      </div><!-- end .col-12 -->
+    </div><!-- end .row -->
+  </div><!-- end .container -->
 </template>

@@ -22,16 +22,8 @@ After dependency installation is over run the following command to serve applica
 au run
 ```
 
-The application will now be availiable at http://localhost:9000
+The application will then be availiable at http://localhost:9000
 
-## Running the tests
-
-To run the tests 
-
-
-```
-au test --watch
-```
 
 ## Built With
 

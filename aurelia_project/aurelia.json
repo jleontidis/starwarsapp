@@ -85,6 +85,11 @@
             "env": "dev"
           },
           {
+            "name": "aurelia-auth",
+            "path": "../node_modules/aurelia-auth/dist/amd",
+            "main": "aurelia-auth"
+          },
+          {
             "name": "jquery",
             "path": "../node_modules/jquery/",
             "main": "jquery.min"
@@ -99,6 +104,14 @@
             "name": "popper.js",
             "path": "../node_modules/popper.js/dist/umd",
             "main": "popper.min"
+          },
+          {
+            "name": "nprogress",
+            "path": "../node_modules/nprogress",
+            "main": "nprogress",
+            "resources": [
+              "nprogress.css"
+            ]
           },
           "text"
         ]

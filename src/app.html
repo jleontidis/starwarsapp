@@ -3,6 +3,6 @@
     <require from="./navigation/navbar"></require>
     
   <navbar router.bind="router"></navbar>
-
-  <router-view criteria.bind="criteria"></router-view>
+  <loading-indicator loading.bind="router.isNavigating || api.isRequesting"></loading-indicator>
+  <router-view></router-view>
 </template>

@@ -21,7 +21,7 @@
                     <span>${vehicle.manufacturer}</span>
                   </li>
                   <li>Class:
-                    <span>${vehicle.starship_class}</span>
+                    <span>${vehicle.vehicle_class}</span>
                   </li>
                   <li>Consumables
                     <span>${vehicle.consumables}</span>
@@ -49,29 +49,26 @@
               </div><!-- end .col-6 -->
             </div><!-- end .row -->
             <div class="row">
-              <div class="col-12 col-sm-6">
+              <div class="col-12 col-sm-6" if.bind="people">
                 <h2>Pilots:</h2>
                 <ul class="starwars-list-info">
-                  <li>
-                    <span>Jabba Desilijic Tiure</span>
+                  <li repeat.for="pilot of people">
+                    <span>${pilot.name}</span>
                   </li>
                 </ul>
               </div><!-- end .col-6 -->
-              <div class="col-12 col-sm-6">
+              <div class="col-12 col-sm-6" if.bind="films">
                 <h2>Films:</h2>
                 <ul class="starwars-list-info">
-                  <li>
-                    <span>Revenge of the Sith</span>
-                  </li>
-                  <li>
-                    <span>A New Hope</span>
+                  <li repeat.for="film of films">
+                    <span>${film.title}</span>
                   </li>
                 </ul>
               </div><!-- end .col-12 -->
             </div><!-- end .row -->
           </div><!-- end .card-body -->
           <div class="card-footer">
-            <a route-href="route: vehicles">Back</a>
+            <a route-href="route: home">Back</a>
           </div>
         </div><!-- end .card-starwars -->
       </div><!-- end .col-12 -->

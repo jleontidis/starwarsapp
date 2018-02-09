@@ -3,7 +3,7 @@ import {StageComponent} from 'aurelia-testing';
 import {ApiService} from '../../src/api-service';
 import {bootstrap} from 'aurelia-bootstrapper';
 import {Films} from '../../src/films/films';
-import {FakeApi} from '../../src/fakeApi';
+
 export class MockService {
     constructor(title){
         this.title = title;

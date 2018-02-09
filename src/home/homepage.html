@@ -1,12 +1,70 @@
 <template>
+  <require from="../people/people"></require>
+  <require from="../species/species"></require>
+  <require from="../vehicles/vehicles"></require>
+  <require from="../starships/starships"></require>
+  <require from="../planets/planets"></require>
+  <require from="../films/films"></require>
+  
   <div class="container">
       <div class="row">
-        <div class="col-12 col-md-4" repeat.for="d of data">
-          <compose if.bind="d.type === 'people'" view-model="../people/people" model.bind="d"></compose>
-          <compose if.bind="d.type === 'starships'" view-model="../starships/starships" model.bind="d"></compose>
-          <compose if.bind="d.type === 'vehicles'" view-model="../vehicles/vehicles" model.bind="d"></compose>
-          <compose if.bind="d.type === 'planets'" view-model="../planets/planets" model.bind="d"></compose>
-        </div><!-- .end col-12 -->
+          <div class="col-md-3">
+              <div class="search-container">
+                <div class="container">
+                  <div class="row">
+
+                      <div class="col-12">
+                          <h3 class="search-title">Search</h3>
+                          <input type="text" class="form-control" value.bind="criteria" />
+                        </div><!-- end .col-12 -->
+
+                    <div class="col-12">
+                      <div class="starwars-checkbox-container">
+
+                      <div class=" starwars-checkbox">
+                        <input type="checkbox" name="people" checked.bind="people.checked" id="customCheck1">
+                        <label class="" for="customCheck1">People</label>
+                      </div>
+                      
+                      <div class=" starwars-checkbox">
+                        <input type="checkbox" name="starships"  checked.bind="starships.checked" id="customCheck2">
+                        <label class="" for="customCheck2">Starships</label>
+                      </div>
+                      
+                      <div class=" starwars-checkbox">
+                        <input type="checkbox" name="vehicles" checked.bind="vehicles.checked" id="customCheck3">
+                        <label class="" for="customCheck3">Vehicles</label>
+                      </div>
+              
+                      <div class="starwars-checkbox">
+                        <input type="checkbox" name="species" checked.bind="species.checked" id="customCheck4">
+                        <label class="" for="customCheck4">Species</label>
+                      </div>
+              
+                      <div class="starwars-checkbox"> 
+                        <input type="checkbox" name="films" checked.bind="films.checked" id="customCheck5">
+                        <label class="" for="customCheck5">Films</label>
+                      </div>
+              
+                      <div class=" starwars-checkbox">
+                        <input type="checkbox" name="planets" checked.bind="planets.checked" id="customCheck6">
+                        <label class="" for="customCheck6">Planets</label>
+                      </div>
+                    </div><!-- end .starwars-checkbox-container -->
+                    </div><!-- end .col-12 -->
+                    </div><!-- end .row -->
+                  </div><!-- end .container -->
+               </div><!-- end .search-container -->
+              </div><!-- end .col-2 -->
+        <div class="col-md-9">
+        
+         <people if.bind="people.checked" people.bind="people" criteria.bind="criteria"></people>
+         <vehicles if.bind="vehicles.checked"  vehicles.bind="vehicles" criteria.bind="criteria"></vehicles>
+          <starships if.bind="starships.checked"  starships.bind="starships" criteria.bind="criteria"></starships>
+          <planets if.bind="planets.checked"  planets.bind="planets" criteria.bind="criteria"></planets>
+          <films if.bind="films.checked"  films.bind="films" criteria.bind="criteria"></films>
+          <species if.bind="species.checked"  species.bind="species" criteria.bind="criteria"></species>
+        </div><!-- .end col-9 -->
       </div><!-- .end row -->
     </div><!-- .end container -->
 </template>
