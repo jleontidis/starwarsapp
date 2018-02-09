@@ -30,7 +30,7 @@ To run the tests
 
 
 ```
-npm test
+au test --watch
 ```
 
 ## Built With

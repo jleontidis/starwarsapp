@@ -1,0 +1,63 @@
+<template>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 justify-content-center">
+        <h1 class="detail-title">Person Details</h1>
+          <div class="card bg-starwars card-starwars">
+            <div class="card-header">
+              <h2>${person.name} | Human</h2>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12">
+                  <h2>Personal Details</h2>
+                </div>
+                <div class="col-6">
+                  <ul class="starwars-list-info">
+                    <li>Gender: <span>${person.gender}</span></li>
+                    <li>Weight: <span>${person.mass}</span></li>
+                    <li>Height: <span>${person.height}</span></li>
+                    <li>Born on: <span>${person.birth_year}</span></li>
+                  </ul>  
+                </div>
+                <div class="col-6">
+                  <ul class="starwars-list-info">
+                    <li>Skin color: <span>${person.skin_color}</span></li>
+                    <li>Eye color: <span>${person.eye_color}</span></li>
+                    <li>Hair color: <span>${person.hair_color}</span></li>
+                  </ul>
+                </div>
+              </div><!-- end .row -->
+              <div class="row">
+                <div class="col-12 col-sm-6">
+                  <h2>Films:</h2> 
+                  <ul class="starwars-list-info">
+                    <li><span>The Empire Strikes Back</span></li>
+                    <li><span>Revenge of the Sith</span></li>
+                    <li><span>Return of the Jedi</span></li>
+                    <li><span>The Force Awakens</span></li>
+                    <li><span>A New Hope</span></li>
+                  </ul> 
+                </div><!-- end .col-6 -->
+                <div class="col-12 col-sm-6">
+                    <h2>Vehicles:</h2> 
+                    <ul class="starwars-list-info">
+                      <li><span>Snowspeeder</span></li>
+                      <li><span>Imperial Speeder Bike</span></li>
+                    </ul>  
+                    <h2>Starships:</h2> 
+                    <ul class="starwars-list-info">
+                      <li><span>X-wing</span></li>
+                      <li><span>Imperial shuttle</span></li>
+                    </ul>  
+                </div>
+              </div><!-- end .row -->
+            </div><!-- end .card-body -->
+            <div class="card-footer">
+              <a route-href="route: people">Back</a>
+            </div>
+        </div><!-- end .card-starwars -->
+      </div><!-- end .col-12 -->
+    </div><!-- end .row -->
+  </div><!-- end .container -->
+</template>

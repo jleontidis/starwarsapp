@@ -1,0 +1,24 @@
+<template>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4" repeat.for="r of data.results">
+        <div class="card bg-starwars card-starwars card-starship">
+          <div class="card-header">
+            <h2>${starship.name}</h2>
+          </div>
+          <div class="card-body">
+            <ul class="starwars-list-info">
+              <li>Model: <span>${starship.model}</span></li>
+              <li>Cost: <span>${starship.cost_in_credits} credits</span></li>
+              <li>Crew: <span>${starship.crew}</span></li>
+              <li>Class:<span>${starship.starship_class}</span></li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a route-href="route: starship-detail; params.bind: { id: starshipid }">View more</a>
+          </div>
+        </div><!-- .end card-starwars -->
+      </div><!-- .end col-12 -->
+    </div><!-- .end row -->
+  </div><!-- .end container -->
+</template>

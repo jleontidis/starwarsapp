@@ -1,3 +1,8 @@
 <template>
-  <h1>${message}</h1>
+    <require from="stylesheets/styles.css"></require>
+    <require from="./navigation/navbar"></require>
+    
+  <navbar router.bind="router"></navbar>
+
+  <router-view criteria.bind="criteria"></router-view>
 </template>

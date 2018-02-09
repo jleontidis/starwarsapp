@@ -1,0 +1,86 @@
+<template>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 justify-content-center">
+        <h1 class="detail-title">Starship Details</h1>
+        <div class="card bg-starwars card-starwars">
+          <div class="card-header">
+            <h2>${starship.name}</h2>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <h2>Costs: ${starship.cost_in_credits} credits</h2>
+              </div>
+              <div class="col-6">
+                <ul class="starwars-list-info">
+                  <li>Model:
+                    <span>${starship.model}</span>
+                  </li>
+                  <li>Manufacturer:
+                    <span>${starship.manufacturer}</span>
+                  </li>
+                  <li>Class:
+                    <span>${starship.starship_class}</span>
+                  </li>
+                  <li>MGLT:
+                    <span>${starship.MGLT}</span>
+                  </li>
+                  <li>Consumables
+                    <span>${starship.consumables}</span>
+                  </li>
+                </ul>
+              </div><!-- end .col-6 -->
+              <div class="col-6">
+                <ul class="starwars-list-info">
+                  <li>Length:
+                    <span>${starship.length}</span>
+                  </li>
+                  <li>Crew:
+                    <span>${starship.crew}</span>
+                  </li>
+                  <li>Passengers:
+                    <span>${starship.passengers}</span>
+                  </li>
+                  <li>Cargo capacity:
+                    <span>${starship.cargo_capacity}</span>
+                  </li>
+                  <li>Hyperdrive rating:
+                    <span>${starship.hyperdrive_rating}</span>
+                  </li>
+                  <li>Max atmosphering speed:
+                    <span>${starship.max_atmosphering_speed}</span>
+                  </li>
+                </ul>
+              </div><!-- end .col-6 -->
+            </div><!-- end .row -->
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <h2>Pilots:</h2>
+                <ul class="starwars-list-info">
+                  <li>
+                    <span>Jabba Desilijic Tiure</span>
+                  </li>
+                </ul>
+              </div><!-- end .col-6 -->
+              <div class="col-12 col-sm-6">
+                <h2>Films:</h2>
+                <ul class="starwars-list-info">
+                  <li>
+                    <span>Revenge of the Sith</span>
+                  </li>
+                  <li>
+                    <span>A New Hope</span>
+                  </li>
+                </ul>
+              </div><!-- end .col-12 -->
+            </div><!-- end .row -->
+          </div><!-- end .card-body -->
+          <div class="card-footer">
+            <a route-href="route: starships">Back</a>
+          </div>
+        </div><!-- end .card-starwars -->
+      </div><!-- end .col-12 -->
+    </div><!-- end .row -->
+  </div><!-- end .container -->
+</template>

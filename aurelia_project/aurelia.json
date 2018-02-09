@@ -15,6 +15,9 @@
         "output": "scripts"
       }
     ],
+    "copyFiles": {    
+      "custom_fonts/starwars/distantgalaxy.ttf": "fonts/"
+    },
     "options": {
       "minify": "stage & prod",
       "sourcemaps": "dev & stage"
@@ -39,6 +42,7 @@
             "path": "node_modules/aurelia-cli/lib/resources/scripts/configure-bluebird.js",
             "env": "dev"
           },
+          "node_modules/fuse.js/dist/fuse.js",
           "node_modules/requirejs/require.js"
         ],
         "dependencies": [
@@ -47,6 +51,7 @@
           "aurelia-dependency-injection",
           "aurelia-event-aggregator",
           "aurelia-framework",
+          "aurelia-fetch-client",
           "aurelia-history",
           "aurelia-history-browser",
           "aurelia-loader",
@@ -78,6 +83,22 @@
             "path": "../node_modules/aurelia-testing/dist/amd",
             "main": "aurelia-testing",
             "env": "dev"
+          },
+          {
+            "name": "jquery",
+            "path": "../node_modules/jquery/",
+            "main": "jquery.min"
+          },
+          {
+            "name": "bootstrap",
+            "path": "../node_modules/bootstrap/dist/js",
+            "main": "bootstrap.min",
+            "deps": "jquery"
+          },
+          {
+            "name": "popper.js",
+            "path": "../node_modules/popper.js/dist/umd",
+            "main": "popper.min"
           },
           "text"
         ]
@@ -124,10 +145,10 @@
     "source": "src/**/*.html"
   },
   "cssProcessor": {
-    "id": "none",
-    "displayName": "None",
-    "fileExtension": ".css",
-    "source": "src/**/*.css"
+    "id": "sass",
+    "displayName": "Sass",
+    "fileExtension": ".scss",
+    "source": "src/**/*.scss"
   },
   "editor": {
     "id": "vscode",

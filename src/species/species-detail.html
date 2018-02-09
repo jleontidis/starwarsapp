@@ -1,0 +1,80 @@
+<template>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 justify-content-center">
+        <h1 class="detail-title">Race Details</h1>
+        <div class="card bg-starwars card-starwars">
+          <div class="card-header">
+            <h2>${race.name}</h2>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <h2>Planet - Nal Hutta</h2>
+              </div>
+              <div class="col-6">
+                <ul class="starwars-list-info">
+                  <li>Language:
+                    <span>${race.language}</span>
+                  </li>
+                  <li>Population:
+                    <span>${race.population}</span>
+                  </li>
+                  <li>Class:
+                    <span>${race.classification}</span>
+                  </li>
+                  <li>Designation:
+                    <span>${race.designation}</span>
+                  </li>
+                </ul>
+              </div><!-- end .col-6 -->
+              <div class="col-6">
+                <ul class="starwars-list-info">
+                  <li>Eye colors:
+                    <span>${race.eye_colors}</span>
+                  </li>
+                  <li>Hair colors:
+                    <span>${race.hair_colors}</span>
+                  </li>
+                  <li>Skin colors:
+                    <span>${race.skin_colors}</span>
+                  </li>
+                  <li>Average height:
+                    <span>${race.average_height}</span>
+                  </li>
+                  <li>Average lifespan:
+                    <span>${race.average_lifespan}</span>
+                  </li>
+                </ul>
+              </div><!-- end .col-6 -->
+            </div> <!-- end .row -->
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <h2>People:</h2>
+                <ul class="starwars-list-info">
+                  <li>
+                    <span>Jabba Desilijic Tiure</span>
+                  </li>
+                </ul>
+              </div><!-- end .col-6 -->
+              <div class="col-12 col-sm-6">
+                <h2>Films:</h2>
+                <ul class="starwars-list-info">
+                  <li>
+                    <span>Revenge of the Sith</span>
+                  </li>
+                  <li>
+                    <span>A New Hope</span>
+                  </li>
+                </ul>
+              </div><!-- end .col-12 -->
+            </div><!-- end .row -->
+          </div><!-- end .card-body -->
+          <div class="card-footer">
+            <a route-href="route: species">Back</a>
+          </div>
+        </div><!-- end .card-starwars -->
+      </div><!-- end .col-12 -->
+    </div><!-- end .row -->
+  </div><!-- end .container -->
+</template>

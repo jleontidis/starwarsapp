@@ -1,0 +1,12 @@
+<template>
+  <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4" repeat.for="d of data">
+          <compose if.bind="d.type === 'people'" view-model="../people/people" model.bind="d"></compose>
+          <compose if.bind="d.type === 'starships'" view-model="../starships/starships" model.bind="d"></compose>
+          <compose if.bind="d.type === 'vehicles'" view-model="../vehicles/vehicles" model.bind="d"></compose>
+          <compose if.bind="d.type === 'planets'" view-model="../planets/planets" model.bind="d"></compose>
+        </div><!-- .end col-12 -->
+      </div><!-- .end row -->
+    </div><!-- .end container -->
+</template>

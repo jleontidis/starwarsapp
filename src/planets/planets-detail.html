@@ -1,0 +1,83 @@
+<template>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 justify-content-center">
+        <h1 class="detail-title">Planet Details</h1>
+        <div class="card bg-starwars card-starwars">
+          <div class="card-header">
+            <h2>${planet.name}</h2>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <h2>Planet Details</h2>
+              </div>
+              <div class="col-6">
+                <ul class="starwars-list-info">
+                  <li>Gravity:
+                    <span>${planet.gravity}</span>
+                  </li>
+                  <li>Climate:
+                    <span>${planet.climate}</span>
+                  </li>
+                  <li>Population:
+                    <span>${planet.population}</span>
+                  </li>
+                  <li>Terrain:
+                    <span>${planet.terrain}</span>
+                  </li>
+                </ul>
+              </div><!-- end .col-6 -->
+              <div class="col-6">
+                <ul class="starwars-list-info">
+                  <li>Surface water:
+                    <span>${planet.surface_water}</span>
+                  </li>
+                  <li>Diameter:
+                    <span>${planet.diameter}</span>
+                  </li>
+                  <li>Rotation period:
+                    <span>${planet.rotation_period}</span>
+                  </li>
+                  <li>Orbital period:
+                    <span>${planet.orbital_period}</span>
+                  </li>
+                </ul>
+              </div><!-- end .col-6 -->
+            </div><!-- end .row -->
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <h2>Residents:</h2>
+                <ul class="starwars-list-info">
+                  <li>
+                    <span>Leia Organa</span>
+                  </li>
+                  <li>
+                    <span>Bail Prestor Organa</span>
+                  </li>
+                  <li>
+                    <span>Raymus Antilles</span>
+                  </li>
+                </ul>
+              </div><!-- end .col-6 -->
+              <div class="col-12 col-sm-6">
+                <h2>Films:</h2>
+                <ul class="starwars-list-info">
+                  <li>
+                    <span>Revenge of the Sith</span>
+                  </li>
+                  <li>
+                    <span>A New Hope</span>
+                  </li>
+                </ul>
+              </div><!-- end .col-12 -->
+            </div><!-- end .row -->
+          </div><!-- end .card-body -->
+          <div class="card-footer">
+            <a route-href="route: planets">Back</a>
+          </div>
+        </div><!-- end .card-starwars -->
+      </div><!-- end .col-12 -->
+    </div><!-- end .row -->
+  </div><!-- end .container -->
+</template>

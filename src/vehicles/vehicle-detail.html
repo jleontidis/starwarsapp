@@ -1,0 +1,80 @@
+<template>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 justify-content-center">
+        <h1 class="detail-title">Vehicle Details</h1>
+        <div class="card bg-starwars card-starwars">
+          <div class="card-header">
+            <h2>${vehicle.name}</h2>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <h2>Costs: ${vehicle.cost_in_credits} credits</h2>
+              </div>
+              <div class="col-6">
+                <ul class="starwars-list-info">
+                  <li>Model:
+                    <span>${vehicle.model}</span>
+                  </li>
+                  <li>Manufacturer:
+                    <span>${vehicle.manufacturer}</span>
+                  </li>
+                  <li>Class:
+                    <span>${vehicle.starship_class}</span>
+                  </li>
+                  <li>Consumables
+                    <span>${vehicle.consumables}</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="starwars-list-info">
+                  <li>Length:
+                    <span>${vehicle.length}</span>
+                  </li>
+                  <li>Crew:
+                    <span>${vehicle.crew}</span>
+                  </li>
+                  <li>Passengers:
+                    <span>${vehicle.passengers}</span>
+                  </li>
+                  <li>Cargo capacity:
+                    <span>${vehicle.cargo_capacity}</span>
+                  </li>
+                  <li>Max atmosphering speed:
+                    <span>${vehicle.max_atmosphering_speed}</span>
+                  </li>
+                </ul>
+              </div><!-- end .col-6 -->
+            </div><!-- end .row -->
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <h2>Pilots:</h2>
+                <ul class="starwars-list-info">
+                  <li>
+                    <span>Jabba Desilijic Tiure</span>
+                  </li>
+                </ul>
+              </div><!-- end .col-6 -->
+              <div class="col-12 col-sm-6">
+                <h2>Films:</h2>
+                <ul class="starwars-list-info">
+                  <li>
+                    <span>Revenge of the Sith</span>
+                  </li>
+                  <li>
+                    <span>A New Hope</span>
+                  </li>
+                </ul>
+              </div><!-- end .col-12 -->
+            </div><!-- end .row -->
+          </div><!-- end .card-body -->
+          <div class="card-footer">
+            <a route-href="route: vehicles">Back</a>
+          </div>
+        </div><!-- end .card-starwars -->
+      </div><!-- end .col-12 -->
+    </div><!-- end .row -->
+  </div><!-- end .container -->
+</template>

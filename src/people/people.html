@@ -1,0 +1,29 @@
+<template>
+    <div class="card bg-starwars card-starwars">
+        <div class="card-header">
+            <h2>${person.name}</h2>
+        </div>
+        <div class="card-body">
+            <ul class="starwars-list-info">
+                <li>Height:
+                    <span>${person.height}</span>
+                </li>
+                <li>Gender:
+                    <span>${person.gender}</span>
+                </li>
+                <li>Weight:
+                    <span>${person.mass}</span>
+                </li>
+                <li>Birth Year:
+                    <span>${person.birth_year}</span>
+                </li>
+                <li>Skin color:
+                    <span>${person.skin_color}</span>
+                </li>
+            </ul>
+        </div>
+        <div class="card-footer">
+            <a route-href="route: person-detail; params.bind: { id : personid }">View more</a>
+        </div>
+    </div>
+</template>

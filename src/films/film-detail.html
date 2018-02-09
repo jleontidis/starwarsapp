@@ -1,0 +1,64 @@
+<template>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 justify-content-center">
+        <h1 class="detail-title">Film Details</h1>
+          <div class="card bg-starwars card-starwars">
+            <div class="card-header">
+              <h2>${film.title} | Episode 6</h2>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12">
+                  <h2>Description</h2>
+                  <p>${film.opening_crawl}</p>
+                </div>
+                <div class="col-12">
+                  <ul class="starwars-list-info">
+                    <li>Directed by: <span>${film.director}</span></li>
+                    <li>Producer: <span>${film.producer}</span></li>
+                    <li>Released on: <span>${film.release_date}</span></li>
+                  </ul>
+                </div>
+              </div><!-- end .row -->
+              <div class="row">
+                <div class="col-12 col-sm-6">
+                  <h2>Characters:</h2> 
+                  <ul class="starwars-list-info">
+                    <li><span>The Empire Strikes Back</span></li>
+                    <li><span>Revenge of the Sith</span></li>
+                    <li><span>Return of the Jedi</span></li>
+                    <li><span>The Force Awakens</span></li>
+                    <li><span>A New Hope</span></li>
+                  </ul> 
+                  <h2>Species:</h2> 
+                  <ul class="starwars-list-info">
+                    <li><span>The Empire Strikes Back</span></li>
+                    <li><span>Revenge of the Sith</span></li>
+                    <li><span>Return of the Jedi</span></li>
+                    <li><span>The Force Awakens</span></li>
+                    <li><span>A New Hope</span></li>
+                  </ul> 
+                </div><!-- end .col-6 -->
+                <div class="col-12 col-sm-6">
+                  <h2>Planets:</h2> 
+                    <ul class="starwars-list-info">
+                      <li><span>Snowspeeder</span></li>
+                      <li><span>Imperial Speeder Bike</span></li>
+                    </ul>  
+                    <h2>Starships:</h2> 
+                    <ul class="starwars-list-info">
+                      <li><span>X-wing</span></li>
+                      <li><span>Imperial shuttle</span></li>
+                    </ul>  
+                </div><!-- end .col-12 -->
+              </div><!-- end .row -->
+            </div><!-- end .card-body -->
+            <div class="card-footer">
+              <a route-href="route: films">Back</a>
+            </div>
+          </div><!-- end .card -->
+      </div><!-- end .col -->
+    </div><!-- end .row -->
+  </div><!-- end .container -->
+</template>
