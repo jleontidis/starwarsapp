@@ -29,6 +29,6 @@ export class Vehicles {
 
   getID(url){
     
-    return url.substr(url.lastIndexOf('planets/') + 8).split('/')[0];
+    return url.substr(url.lastIndexOf('vehicles/') + 9).split('/')[0];
   }
 }

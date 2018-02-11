@@ -47,29 +47,24 @@
             </div><!-- end .row -->
             <div class="row">
               <div class="col-12 col-sm-6">
-                <h2>Residents:</h2>
-                <ul class="starwars-list-info">
-                  <li>
-                    <span>Leia Organa</span>
-                  </li>
-                  <li>
-                    <span>Bail Prestor Organa</span>
-                  </li>
-                  <li>
-                    <span>Raymus Antilles</span>
-                  </li>
-                </ul>
+                <div class="characters" if.bind="people">
+                  <h2>Residents:</h2>
+                  <ul class="starwars-list-info">
+                    <li repeat.for="person of people">
+                      <span>${person.data.name}</span>
+                    </li>
+                  </ul>
+                </div>
               </div><!-- end .col-6 -->
               <div class="col-12 col-sm-6">
-                <h2>Films:</h2>
-                <ul class="starwars-list-info">
-                  <li>
-                    <span>Revenge of the Sith</span>
-                  </li>
-                  <li>
-                    <span>A New Hope</span>
-                  </li>
-                </ul>
+                <div class="films" if.bind="films">
+                  <h2>Films:</h2>
+                  <ul class="starwars-list-info">
+                    <li repeat.for="film of films">
+                      <span>${film.data.title}</span>
+                    </li>
+                  </ul>
+                </div>
               </div><!-- end .col-12 -->
             </div><!-- end .row -->
           </div><!-- end .card-body -->

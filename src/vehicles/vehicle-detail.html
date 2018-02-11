@@ -53,7 +53,7 @@
                 <h2>Pilots:</h2>
                 <ul class="starwars-list-info">
                   <li repeat.for="pilot of people">
-                    <span>${pilot.name}</span>
+                    <span>${pilot.data.name}</span>
                   </li>
                 </ul>
               </div><!-- end .col-6 -->
@@ -61,7 +61,7 @@
                 <h2>Films:</h2>
                 <ul class="starwars-list-info">
                   <li repeat.for="film of films">
-                    <span>${film.title}</span>
+                    <span>${film.data.title}</span>
                   </li>
                 </ul>
               </div><!-- end .col-12 -->

@@ -5,7 +5,7 @@
         <h1 class="detail-title">Film Details</h1>
           <div class="card bg-starwars card-starwars">
             <div class="card-header">
-              <h2>${film.title} | Episode 6</h2>
+              <h2>${film.title} | Episode ${film.episode_id}</h2>
             </div>
             <div class="card-body">
               <div class="row">
@@ -26,13 +26,13 @@
                   <div class="characters" if.bind="people">
                   <h2>Characters:</h2> 
                   <ul class="starwars-list-info">
-                    <li repeat.for="person of people"><span>${person.name}</span></li>
+                    <li repeat.for="person of people"><span>${person.data.name}</span></li>
                   </ul> 
                 </div><!-- end .characters -->
                 <div class="species" if.bind="species">
                   <h2>Species:</h2> 
                   <ul class="starwars-list-info">
-                    <li repeat.for="race of species"><span>${race.name}</span></li>
+                    <li repeat.for="race of species"><span>${race.data.name}</span></li>
                   </ul> 
                 </div><!-- end .species -->
                 </div><!-- end .col-6 -->
@@ -40,13 +40,13 @@
                   <div class="planets">
                   <h2>Planets:</h2> 
                     <ul class="starwars-list-info">
-                      <li repeat.for="planet of planets"><span>${planet.name}</span></li>
+                      <li repeat.for="planet of planets"><span>${planet.data.name}</span></li>
                     </ul>  
                   </div><!-- end .planets -->
                   <div class="starships">
                     <h2>Starships:</h2> 
                     <ul class="starwars-list-info">
-                      <li repeat.for="starship of starships"><span>${starship.name}</span></li>
+                      <li repeat.for="starship of starships"><span>${starship.data.name}</span></li>
                     </ul>  
                   </div><!-- end .starships -->
                 </div><!-- end .col-12 -->
