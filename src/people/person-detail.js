@@ -48,7 +48,7 @@ export class PersonDetail {
       if(this.person.species.length > 0) {
 
         this.api.fetchAttachedUrls(this.person.species)
-        .then(res => this.species = res[0])
+        .then(res => this.species = res[0].data)
         .catch(err => console.log(err));
       }
       

@@ -8,8 +8,8 @@ export class App {
     config.addAuthorizeStep(AuthorizeStep);
     config.map([
       { route:'', moduleId:'./home/login', name:'login', nav: true, title: 'Log In', auth: false },
-      { route: 'logout', moduleId:'./home/logout', name: 'logout', nav: true, auth: true, title: 'Log Out'},
       { route: 'home', moduleId: './home/homepage', name: 'home', nav: true, title: 'Home', auth:true },
+      { route: 'logout', moduleId:'./home/logout', name: 'logout', nav: true, auth: true, title: 'Log Out'},
       { route: 'people/:id', moduleId: './people/person-detail', name: 'person-detail',  title: 'Person details', auth:true },
       { route: 'planets/:id', moduleId: './planets/planet-detail', name: 'planet-detail',  title: 'Planet details', auth:true },
       { route: 'films/:id', moduleId: './films/film-detail', name: 'film-detail',  title: 'Film details', auth:true },

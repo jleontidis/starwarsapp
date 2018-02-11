@@ -34,20 +34,20 @@
                 <div if.bind="films" class="col-12 col-sm-6">
                   <h2>Films:</h2> 
                   <ul class="starwars-list-info">
-                    <li repeat.for="film of films"><span>${film.title}</span></li>
+                    <li repeat.for="film of films"><span>${film.data.title}</span></li>
                   </ul> 
                 </div><!-- end .col-6 -->
                 <div class="col-12 col-sm-6">
                   <div if.bind="vehicles" class="vehicles">
                     <h2>Vehicles:</h2> 
                     <ul class="starwars-list-info">
-                      <li repeat.for="vehicle of vehicles"><span>${vehicle.name}</span></li>
+                      <li repeat.for="vehicle of vehicles"><span>${vehicle.data.name}</span></li>
                     </ul>  
                   </div>
                   <div if.bind="starships" class="starships">
                     <h2>Starships:</h2> 
                     <ul class="starwars-list-info">
-                      <li repeat.for="starship of starships"><span>${starship.name}</span></li>
+                      <li repeat.for="starship of starships"><span>${starship.data.name}</span></li>
                     </ul>
                   </div>  
                 </div>
