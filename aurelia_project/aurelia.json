@@ -163,6 +163,12 @@
     "fileExtension": ".scss",
     "source": "src/**/*.scss"
   },
+  "fontAwesomeProcessor": {
+    "id": "fontawesome",
+    "displayName": "font-awesome",
+    "fileExtension": ".css",
+    "source": "node_modules/font-awesome/css/font-awesome.min.css"
+  },
   "editor": {
     "id": "vscode",
     "displayName": "Visual Studio Code"

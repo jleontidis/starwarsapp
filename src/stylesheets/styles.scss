@@ -21,6 +21,7 @@
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+@import "../../node_modules/font-awesome/scss/font-awesome";
 
 $yellow : #fee123;
 $blue   : #3cbfaf;
@@ -92,6 +93,10 @@ label {
     font-family: 'DistantGalaxy'   
 }
 
+.data-wrapper {
+    margin: 20px 0;
+}
+
 .card-starwars {
     margin-bottom: 20px;
     
@@ -151,16 +156,17 @@ label {
     position: absolute;
     left: 70px;
     font-size: 2rem;
+    cursor: pointer;
   }
     
   
   .starwars-checkbox input[type="checkbox"]:checked:before {
     
     content: "";
-    top: -25px;
+    top: -10px;
     position: relative;
-    left: -15px;
-    font-size: 2rem;
+    left: -7px;
+    font-size: 1rem;
   }
   
   .starwars-checkbox input[type="checkbox"]:focus, .starwars-checkbox input[type="checkbox"]:active {
@@ -179,9 +185,47 @@ label {
     -moz-appearance: none;
     -webkit-appearance : none;
     -ms-appearance: none;
+    cursor: pointer;
   }
   
   .starwars-checkbox input[type="checkbox"]:checked {
   
-    background-color: $orange;
+    background-color: $red;
+    font-family: "FontAwesome";
   } 
+
+
+  .starwars-checkbox input[name="people"]:checked::before {
+    
+    content: "\f007";
+  }
+
+  
+  .starwars-checkbox input[name="starships"]:checked::before {
+    
+    content: "\f197";
+  }
+
+  
+  .starwars-checkbox input[name="vehicles"]:checked::before {
+    
+    content: "\f1b9";
+  }
+
+  
+  .starwars-checkbox input[name="species"]:checked::before {
+   
+    content: "\f225";
+  }
+
+  
+  .starwars-checkbox input[name="films"]:checked::before {
+ 
+    content: "\f008";
+  }
+
+  
+  .starwars-checkbox input[name="planets"]:checked::before {
+
+    content: "\f0ac";
+  }

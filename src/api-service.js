@@ -26,7 +26,7 @@ export class ApiService {
 
   fetchItem(url, resourceType){
 
-    return fetch(url)
+    return this.httpClient.fetch(url)
     .then(response => response.json())
     .then(result => { this[resourceType] = { type: resourceType, data: result } } )
     .catch(error => console.log(error));
@@ -36,11 +36,13 @@ export class ApiService {
     
     if(endpointArray instanceof Array){
       return Promise.all(endpointArray.map(url => {
-        return fetch(url).then(res => res.json());
+        return this.httpClient.fetch(url).then(res => res.json())
+        .then(res => { return {url: url, data: res}})
+        .catch(err => console.log(err));
         }));
     } else {
 
-      return fetch(endpointArray).then(res => res.json());
+      return this.httpClient.fetch(endpointArray).then(res => res.json());
     }
     
   }

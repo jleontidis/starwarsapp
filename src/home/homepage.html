@@ -57,13 +57,14 @@
                </div><!-- end .search-container -->
               </div><!-- end .col-2 -->
         <div class="col-md-9">
-        
-         <people if.bind="people.checked" people.bind="people" criteria.bind="criteria"></people>
-         <vehicles if.bind="vehicles.checked"  vehicles.bind="vehicles" criteria.bind="criteria"></vehicles>
-          <starships if.bind="starships.checked"  starships.bind="starships" criteria.bind="criteria"></starships>
-          <planets if.bind="planets.checked"  planets.bind="planets" criteria.bind="criteria"></planets>
-          <films if.bind="films.checked"  films.bind="films" criteria.bind="criteria"></films>
-          <species if.bind="species.checked"  species.bind="species" criteria.bind="criteria"></species>
+          <div class="data-wrapper">
+            <people if.bind="people.checked" people.bind="people" criteria.bind="criteria"></people>
+            <vehicles if.bind="vehicles.checked"  vehicles.bind="vehicles" criteria.bind="criteria"></vehicles>
+            <starships if.bind="starships.checked"  starships.bind="starships" criteria.bind="criteria"></starships>
+            <planets if.bind="planets.checked"  planets.bind="planets" criteria.bind="criteria"></planets>
+            <films if.bind="films.checked"  films.bind="films" criteria.bind="criteria"></films>
+            <species if.bind="species.checked"  species.bind="species" criteria.bind="criteria"></species>
+          </div>
         </div><!-- .end col-9 -->
       </div><!-- .end row -->
     </div><!-- .end container -->

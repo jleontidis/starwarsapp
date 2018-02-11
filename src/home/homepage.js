@@ -4,49 +4,91 @@ import {inject, bindable} from 'aurelia-framework';
 @inject(ApiService)
 export class Homepage {
   
-  people = { checked: true, criteria: '' };
-  starships = { checked: true };
-  planets = { checked: true };
-  films = { checked: true };
-  vehicles = { checked: true };
-  species = { checked: true };
-  totalCount = 0;
+  people = { checked: true, data: []};
+  starships = { checked: true, data: [] };
+  planets = { checked: true, data: [] };
+  films = { checked: true, data: [] };
+  vehicles = { checked: true, data: [] };
+  species = { checked: true, data: [] };
 
   constructor(api){
     this.api = api;
   }
 
   created() {
+    //get resources from api
     this.api.getResources().then(res => {
       var resourcesArray = [res.people, res.starships, res.planets, res.species, res.vehicles, res.films ];
+     
+      //get every url retourned and iterate through the pages
       this.api.fetchAttachedUrls(resourcesArray).then(res => {
-            for(var obj in res) {
+           for(var item in res){
 
-              if( res[obj].next === null){
-                this.films.data = res[obj].results;
-              }else {
+             let pages = Math.ceil(res[item].data.count/10);
             
-                if(res[obj].next.includes('people')){
-                  this.people.data = res[obj].results;
-                  this.people.next = res[obj].next;
+             if (res[item].url.includes('people')) {
+              this.people.data = this.people.data.concat(res[item].data.results);
+              for(var i = 2; i <= pages; i++){
             
-                } else if(res[obj].next.includes('vehicles')){
-                  this.vehicles.data = res[obj].results;
-                  this.vehicles.next = res[obj].next;
-                } else if(res[obj].next.includes('starships')){
-                  this.starships.data = res[obj].results;
-                  this.starships.next = obj.next;
-                } else if(res[obj].next.includes('planets')){
-                  this.planets.data = res[obj].results;
-                  this.planets.next = res[obj].next;
-                } else if(res[obj].next.includes('species')){
-                  this.species.data = res[obj].results;
-                  this.species.next = res[obj].next;
-                } 
+                this.api.fetchAttachedUrls(res[item].url + '?page=' + i).then(data =>  {
+                    this.people.data = this.people.data.concat(data.results);
+                  });
+               }
+             } else if(res[item].url.includes('vehicles')){  
+
+              this.vehicles.data = this.vehicles.data.concat(res[item].data.results);
+              for(var i = 2; i <= pages; i++){
+            
+                this.api.fetchAttachedUrls(res[item].url + '?page=' + i).then(data =>  {
+                    this.vehicles.data = this.vehicles.data.concat(data.results);
+                  });
+               }
+
+
+             } else if(res[item].url.includes('starships')){ 
+              
+              this.starships.data = this.starships.data.concat(res[item].data.results);
+              for(var i = 2; i <= pages; i++){
+            
+                this.api.fetchAttachedUrls(res[item].url + '?page=' + i).then(data =>  {
+                    this.starships.data = this.starships.data.concat(data.results);
+                  });
+               }
+             } else if(res[item].url.includes('planets')){ 
+
+              this.planets.data = this.planets.data.concat(res[item].data.results);
+              for(var i = 2; i <= pages; i++){
+            
+                this.api.fetchAttachedUrls(res[item].url + '?page=' + i).then(data =>  {
+                    this.planets.data = this.planets.data.concat(data.results);
+                  });
+               }
+             } else if(res[item].url.includes('species')){ 
+
+              this.species.data = this.species.data.concat(res[item].data.results);
+              for(var i = 2; i <= pages; i++){
+            
+                this.api.fetchAttachedUrls(res[item].url + '?page=' + i).then(data =>  {
+                    this.species.data = this.species.data.concat(data.results);
+                  });
+               }
+
+             } else if(res[item].url.includes('films')){ 
+                           
+             this.films.data = this.films.data.concat(res[item].data.results);
+             console.log(pages);
+             for(var i = 2; i <= pages; i++){
+           
+               this.api.fetchAttachedUrls(res[item].url + '?page=' + i).then(data =>  {
+                   this.films.data = this.films.data.concat(data.results);
+                 });
               }
-            }
-            this.totalCount = this.people.data.length + this.species.data.length +this.films.data.length +this.starships.data.length + this.vehicles.data.length +this.planets.data.length;
-        });
-    });
+             }
+           }
+        });   
+   });
+    
+    
   }
+
 }
